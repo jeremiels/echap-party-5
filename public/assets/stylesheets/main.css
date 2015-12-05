@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'Apercu';
+  src: url("../fonts/Apercu-Light.otf");
+  font-weight: light;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Apercu';
+  src: url("../fonts/Apercu-Bold.otf");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/Futura-Bold-Oblique.otf");
+  font-weight: bold;
+  font-style: oblique; }
+
+body {
+  background-color: #F1666B;
+  padding-top: 5%; }
+
+.container {
+  margin: auto; }
+
+/* Homepage specific Stylesheet*/
+.illustration {
+  float: left;
+  width: 45%;
+  margin-right: 5%; }
+
+.illustration-img {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0); }
+
+.affiche-img {
+  display: none; }
+
+.info-desktop {
+  width: 45%;
+  text-align: center;
+  float: left; }
+
+.title {
+  padding-bottom: 20px;
+  position: relative; }
+  .title::after {
+    content: '';
+    width: 435px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0); }
+  .title h1 {
+    font-size: 64px;
+    font-family: Futura;
+    font-style: oblique;
+    font-weight: bold;
+    margin: 60px 0 0 0;
+    line-height: 32px; }
+    .title h1::before {
+      content: url("../images/bend-text.png");
+      position: absolute;
+      max-width: 250px;
+      top: -70px;
+      left: 50%;
+      transform: translate(-50%, 0); }
+    .title h1::after {
+      content: '5';
+      font-size: 10px;
+      background-color: black;
+      padding: 0.5px 4px;
+      border-radius: 50%;
+      color: #F1666B;
+      right: 10px;
+      bottom: 4px;
+      position: relative; }
+  .title span {
+    text-transform: uppercase;
+    font-family: Apercu;
+    font-size: 21.5px;
+    font-weight: bold;
+    padding-right: 10px;
+    letter-spacing: 0.2px; }
+
+.date {
+  color: white; }
+
+.dancing {
+  color: #E1E433; }
+
+.city {
+  color: #00ABC8; }
+
+.artists-item {
+  margin-top: 20px; }
+
+.artists-item--half {
+  width: 40%;
+  display: inline-block; }
+
+.artists-item--big {
+  display: block;
+  text-align: center; }
+
+.artists-name {
+  font-size: 48px;
+  font-family: Futura;
+  font-weight: bold;
+  font-style: oblique; }
+
+.artists-special-set {
+  font-family: Apercu;
+  font-weight: bold; }
+
+.artists-city-crew {
+  font-family: Apercu;
+  font-weight: light; }
+
+.link {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  line-height: 1;
+  color: black;
+  display: inline-block; }
+
+.link--kukuri {
+  overflow: hidden; }
+
+.link--kukuri:hover {
+  color: black; }
+
+.link--kukuri::after {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  top: 50%;
+  margin-top: -2px;
+  right: 0;
+  background: white;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+.link--kukuri:hover::after {
+  transform: translate3d(100%, 0, 0); }
+
+.link--kukuri::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: white;
+  white-space: nowrap;
+  width: 0%;
+  transition: width 0.4s 0.3s; }
+
+.link--kukuri:hover::before {
+  width: 100%; }
+
+.meta-data {
+  clear: both;
+  margin: 40px auto;
+  padding-top: 10px;
+  position: relative; }
+  .meta-data::before {
+    content: '';
+    width: 435px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0); }
+  .meta-data span {
+    font-family: Apercu;
+    font-weight: bold;
+    margin: 5px 10px;
+    font-size: 14px; }
+
+.meta-data--time {
+  color: #00ABC8; }
+
+.meta-data--hashtag {
+  color: #E1E433;
+  text-transform: uppercase; }
+
+.meta-data--www {
+  color: white;
+  text-transform: uppercase; }
+  .meta-data--www a {
+    color: white;
+    text-decoration: none; }
+
+.social-icon {
+  max-height: 14px;
+  margin: 0 2px; }
+
+.billetterie {
+  clear: both;
+  text-align: center; }
+  .billetterie span {
+    font-family: Futura;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 32px;
+    background-color: black;
+    padding: 10px 40px;
+    margin: 5px; }
+    .billetterie span a {
+      color: white;
+      text-decoration: none; }
+
+@media (max-width: 900px) {
+  .illustration {
+    display: none; }
+  .affiche-img {
+    display: block;
+    width: 80%;
+    margin: 10px auto; }
+  .info-desktop {
+    width: 100%; }
+  .billetterie span {
+    display: block; } }
+
+@media (max-width: 420px) {
+  .title h1 {
+    font-size: 36px; } }

@@ -1,0 +1,21 @@
+{
+  "name": "jlskzc-frontend-starter",
+  "version": "1.0.0",
+  "description": "Frontend Starter kit using gulp, sass, jade, browsersync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "jade"
+  ],
+  "author": "JLSKZC",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
+}
